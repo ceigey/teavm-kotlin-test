@@ -1,0 +1,36 @@
+<div>
+  <h2>
+    <!-- <html:text value="orderNumber" /> -->
+    <std:if condition="!todoItem.done">
+      <!-- Bug that requires these to be on the same level -->
+      <span>
+        <html:text value="todoItem.name" />
+      </span>
+    </std:if>
+    <std:if condition="todoItem.done">
+      <del>
+        <html:text value="todoItem.name" />
+      </del>
+    </std:if>
+    <!-- <std:choose>
+      <std:option when="!todoItem.done">
+        <html:text value="todoItem.name" />
+      </std:option>
+      <std:otherwise>
+        <del>
+          <html:text value="todoItem.name" />
+        </del>
+      </std:otherwise>
+    </std:choose> -->
+  </h2>
+  <div>
+    Rename:
+    <input type="text" html:value="todoItem.name" html:change="todoItem.name" />
+  </div>
+  <button event:click="todoItem.complete()">
+    Completed
+  </button>
+  <button event:click="todoItem.delete()">
+    Remove
+  </button>
+</div>

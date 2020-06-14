@@ -1,0 +1,13 @@
+<?use ceigey:io.github.ceigey.components?>
+<div>
+  <button event:click="newItem()">
+    New Todo
+  </button>
+  <std:foreach var="todoItem" index="i" in="todoItems">
+    <ceigey:todo-item
+      item="todoItem"
+    />
+    <!-- index="i" -->
+    <!-- <ceigey:todo-test/> -->
+  </std:foreach>
+</div>
