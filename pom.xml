@@ -16,7 +16,7 @@
     <flavour.version>0.2.1</flavour.version>
     <teavm.version>0.6.1</teavm.version>
     <jackson.version>2.5.4</jackson.version>
-    <kotlin.version>1.2.31</kotlin.version>
+    <kotlin.version>1.6.0</kotlin.version>
   </properties>
 
   <dependencies>
